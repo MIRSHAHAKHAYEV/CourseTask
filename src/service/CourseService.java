@@ -14,15 +14,12 @@ public class CourseService {
                 "Seçiminizi daxil edin:");
     }
     public void addAdmin(String name,String pass){
-        Admin ad=new Admin(name,pass);
-        adminData.put(name,ad);
+        adminData.put(name,new Admin(name,pass));
     }
     public Boolean checkAdminOrNot(){
         System.out.println("username-");String n= sc.next();
         System.out.println("password-");String p= sc.next();
-        if(adminData.containsKey(n)){
-            return adminData.get(n).getPassword().equals(p);
-        }
-        return false;
+        return adminData.containsKey(n)&&adminData.get(n).getPassword().equals(p);
+
     }
 }
