@@ -20,32 +20,17 @@ public class Course {
     public int getId(){
         return id;
     }
-    public String getDescription() {
-        return description;
-    }
 
     public ArrayList<Student> getStudents() {
         return students;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getTeacherName() {
         return teacherName;
     }
 
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
