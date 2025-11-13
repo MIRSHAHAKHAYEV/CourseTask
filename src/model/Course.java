@@ -3,21 +3,22 @@ package model;
 import java.util.ArrayList;
 
 public class Course {
-    private static int staticId=1;
+    private static int staticId = 1;
     private int id;
     private String name;
     private String teacherName;
     private String description;
-    private ArrayList<Student> students=new ArrayList<>();
+    private ArrayList<Student> students = new ArrayList<>();
 
     public Course(String name, String teacherName, String description) {
-        id=staticId;
+        id = staticId;
         staticId++;
         this.name = name;
         this.teacherName = teacherName;
         this.description = description;
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
 

@@ -3,15 +3,15 @@ package model;
 import java.util.ArrayList;
 
 public class Student {
-    private static int staticId=1;
+    private static int staticId = 1;
     private int id;
     private String name;
     private String surName;
     private int age;
-    private ArrayList<Course> currentCourses=new ArrayList<>();
+    private ArrayList<Course> currentCourses = new ArrayList<>();
 
     public Student(String name, String surName, int age) {
-        id=staticId;
+        id = staticId;
         staticId++;
         this.name = name;
         this.surName = surName;
@@ -41,11 +41,11 @@ public class Student {
     @Override
     public String toString() {
         return "=== Tələbə Profili ===\n" +
-                "Ad: "+name +"\n"+
-                "Soyad: "+surName+"\n" +
-                "Yaş: "+age+"\n" +
+                "Ad: " + name + "\n" +
+                "Soyad: " + surName + "\n" +
+                "Yaş: " + age + "\n" +
                 "Tədris aldığı kurslar:" +
-                (currentCourses.isEmpty()?"YOXDUR":currentCourses);
+                (currentCourses.isEmpty() ? "YOXDUR" : currentCourses);
     }
 
 }
