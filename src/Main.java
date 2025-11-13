@@ -2,25 +2,26 @@ import model.Admin;
 import service.AdminService;
 import service.CourseService;
 import service.StudentService;
+
 import static util.Util.sc;
 
 public class Main {
     public static void main(String[] args) {
-        CourseService cs=new CourseService();
-        StudentService ss=new StudentService();
-        AdminService as=new AdminService();
-        cs.addAdmin("admin","123");
-        int op=0;
-        while (op!=3){
+        CourseService cs = new CourseService();
+        StudentService ss = new StudentService();
+        AdminService as = new AdminService();
+        cs.addAdmin("admin", "123");
+        int op = 0;
+        while (op != 3) {
             cs.showMainMenu();
-            op=sc.nextInt();
-            switch (op){
+            op = sc.nextInt();
+            switch (op) {
                 case 1:
-                    if(!cs.checkAdminOrNot()){
+                    if (!cs.checkAdminOrNot()) {
                         System.out.println("yanlis username ve passowrd");
                         continue;
                     }
-                    while (op!=6) {
+                    while (op != 6) {
                         as.showAdminMenu();
                         op = sc.nextInt();
                         switch (op) {
