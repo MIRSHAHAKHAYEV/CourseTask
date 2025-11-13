@@ -10,19 +10,12 @@ public class StudentService {
     public void checkStudent(){
         System.out.println("ad-");String name=sc.next();
         System.out.println("soyad-");String surName=sc.next();
-        Iterator<Integer> s=studentData.keySet().iterator();
-        boolean isEqual=false;
-        int idOfEqual=0;
-        while (s.hasNext()){
-            Student currentStudent=studentData.get(s.next());
-            if(currentStudent.getName().equals(name)&&currentStudent.getSurName().equals(surName)){
-                isEqual=true;
-                idOfEqual=currentStudent.getId();
+        for(Student student:studentData.values()){
+            if(student.getName().equals(name)&&student.getSurName().equals(surName)){
+                System.out.println(student);
+                return;
             }
         }
-        if(isEqual){
-            System.out.println(studentData.get(idOfEqual).toString());
-        }
-        else System.out.println("bele bir telebe tapilmadi");
+        System.out.println("Belə bir tələbə tapılmadı.");
     }
 }
