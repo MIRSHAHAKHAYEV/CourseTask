@@ -71,7 +71,7 @@ public class AdminService {
             if (cs.getCurrentCourses().isEmpty()) {
                 System.out.print("YOXDUR");
             } else {
-                for (Course c : courseData.values()) {
+                for (Course c : cs.getCurrentCourses()) {
                     System.out.print(c.getName() + " ");
                 }
             }
