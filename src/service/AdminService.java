@@ -69,6 +69,14 @@ public class AdminService {
         Student selectedStudent = studentData.get(sc.nextInt());
         System.out.println("Kurs nömrəsini daxil edin:");
         Course selectedCourse = courseData.get(sc.nextInt());
+        for (Student s:studentData.values()){
+            for (Course c:s.getCurrentCourses()){
+                if(c==selectedCourse){
+                    System.out.println("Bu telebe hal-hazirda hemin kursdadir");
+                    return;
+                }
+            }
+        }
         selectedStudent.getCurrentCourses().add(selectedCourse);
         selectedCourse.getStudents().add(selectedStudent);
         System.out.println("→ " + selectedStudent.getName() + " " + selectedStudent.getSurName() + " “" + selectedCourse.getName() + "” kursuna əlavə olundu!");
