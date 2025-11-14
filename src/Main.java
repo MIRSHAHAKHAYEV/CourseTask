@@ -1,4 +1,3 @@
-import model.Admin;
 import service.AdminService;
 import service.CourseService;
 import service.StudentService;
@@ -17,7 +16,7 @@ public class Main {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    if (!cs.checkAdminOrNot()) {
+                    if (!cs.isAdmin()) {
                         System.out.println("yanlis username ve passowrd");
                         continue;
                     }
