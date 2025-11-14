@@ -1,6 +1,5 @@
 package service;
 import model.Admin;
-import model.Student;
 
 import static util.Util.sc;
 import static dataBase.db.*;
@@ -16,7 +15,7 @@ public class CourseService {
     public void addAdmin(String name,String pass){
         adminData.put(name,new Admin(name,pass));
     }
-    public Boolean checkAdminOrNot(){
+    public Boolean isAdmin(){
         System.out.println("username-");String n= sc.next();
         System.out.println("password-");String p= sc.next();
         return adminData.containsKey(n)&&adminData.get(n).getPassword().equals(p);
