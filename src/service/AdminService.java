@@ -38,7 +38,8 @@ public class AdminService {
         System.out.println("Müəllim:");
         String teach = sc.next();
         System.out.println("Təsvir:");
-        String des = sc.next();
+        sc.nextLine();
+        String des = sc.nextLine();
         Course c = new Course(name, teach, des);
         courseData.put(c.getId(), c);
         System.out.println("→ Kurs uğurla əlavə edildi!");
