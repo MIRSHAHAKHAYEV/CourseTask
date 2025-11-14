@@ -47,13 +47,24 @@ public class AdminService {
 
     public void assignStudentToCourse() {
         System.out.println("=== Tələbələr ===");
-        for (Student currentStudent : studentData.values()) {
-            System.out.println(currentStudent.getId() + ". " + currentStudent.getName() + " " + currentStudent.getSurName());
+        if (studentData.isEmpty()) {
+            System.out.println("Hal-hazirda telebe yoxdur");
+            return;
+        } else {
+            for (Student currentStudent : studentData.values()) {
+                System.out.println(currentStudent.getId() + ". " + currentStudent.getName() + " " + currentStudent.getSurName());
+            }
         }
         System.out.println("=== Kurslar ===");
-        for (Course currentCourse : courseData.values()) {
-            System.out.println(currentCourse.getId() + ". " + currentCourse.getName());
+        if (courseData.isEmpty()) {
+            System.out.println("Hal-hazirda kurs yoxdur");
+            return;
+        } else {
+            for (Course currentCourse : courseData.values()) {
+                System.out.println(currentCourse.getId() + ". " + currentCourse.getName());
+            }
         }
+
         System.out.println("Tələbə nömrəsini daxil edin:");
         Student selectedStudent = studentData.get(sc.nextInt());
         System.out.println("Kurs nömrəsini daxil edin:");
